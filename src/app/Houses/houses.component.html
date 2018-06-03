@@ -1,0 +1,56 @@
+
+  <div class="container">
+        <div class="row">
+         
+          <div class="col">
+                
+               
+                <div class="card" *ngIf="houses">
+                        <div class="card-header">
+                                
+                                <img src="../../assets/landscape.jpg" class="img-fluid" alt="Responsive image">
+                               
+                    
+                        </div>
+                    
+                        <div class="card-block">
+                            <table class="table table-hover">
+                                <thead>
+                                    <tr>
+                                        <th>Houses</th>
+                                      
+                                        
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr *ngFor="let house of houses">
+                                        <td (click)="btnclick(house.url)" *ngIf="house.name">{{house.name}}</td>
+                                      
+                                       
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                      </div>
+          </div>
+          
+          
+          
+          <div class="col">
+               
+          </div>
+          <div class="col">
+                <div class="card">
+                          
+                        <a class="btn btn-primary btn-lg" (click)="Adjustpages()" >
+                            Click to go to next page of houses
+                            </a>
+                           <a class="btn btn-primary btn-lg" (click)="Previous()" >
+                                        Click to go to Previous page of houses
+                                        </a>
+                                
+                    </div>
+          </div>
+          
+        </div>
+      </div>

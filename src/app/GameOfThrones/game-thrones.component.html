@@ -3,9 +3,14 @@
         <div class="row">
          
           <div class="col">
+                
+            
+            
+            
+            
                 <div class="card" *ngIf="characters">
                         <div class="card-header">
-                                <img src="../../assets/thrones.jpg" class="img-fluid" alt="Responsive image">
+                                <img src="../../assets/portret.jpg" class="img-fluid" alt="Responsive image">
                                                             
                     
                         </div>
@@ -14,7 +19,7 @@
                             <table class="table table-hover">
                                 <thead>
                                     <tr>
-                                        <th>Characters</th>
+                                        <th >Characters</th>
                                       
                                         
                                     </tr>
@@ -31,19 +36,45 @@
                       </div>
           </div>
           
-          <div class="col" *ngIf="detail">
-                <div class="card card-body">
-                        <h4 class="card-title">{{detail.name}}</h4>
-                        <p class="card-text">{{detail.aliases}}</p>
-                        <div class="flex-row">
-                            <a class="card-link">{{detail.playedBy}}</a>
-                            <a class="card-link">{{detail.gender}}</a>
-                        </div>
-                    </div>
-          </div>
+          <div class="card" *ngIf="detail">
+                <div class="card-header">{{detail.name| uppercase}}
+                  
+                </div>
+              
+                <div class="card-block">
+                  <ul class="list-group">
+                    <li class="list-group-item" *ngIf="detail.aliases">Aliases:
+                      <strong>{{detail.Aliases}}</strong>
+                    </li>
+                    <li class="list-group-item" *ngIf="detail.born">Born:
+                      <strong>{{detail.born}}</strong>
+                    </li>
+                    <li class="list-group-item" *ngIf="detail.father">Gender:
+                     <strong>{{detail.gender }}</strong>
+                    <li class="list-group-item" *ngIf="detail.mother">Culture:
+                            <strong>{{detail.culture }}</strong>
+                      <li class="list-group-item" *ngIf="detail.playedBy">Played by:
+                            <strong>{{detail.playedBy }}</strong>
+                    </ul>
+                </div>
+              </div>
           
           <div class="col">
-               
+                <div class="card">
+                          
+                        <a class="btn btn-primary btn-lg" (click)="Adjustpages()" >
+                            Click to go to next page of characters
+                            </a>
+                           <a class="btn btn-primary btn-lg" (click)="Previous()" >
+                                        Click to go to Previous page of characters
+                                        </a>
+                                
+                    </div>
+                    <br>
+                    
+
+                    <br>
+                  
           </div>
           
         </div>

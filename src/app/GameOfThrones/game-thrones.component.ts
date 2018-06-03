@@ -11,16 +11,27 @@ export class GameThronesComponent implements OnInit{
     
     characters: Icharacters;
     detail: Idetail
+    pagenumber: number = 1;
     
-    constructor(private _api : fireandice, private char: fireandice){}
+    constructor(private _api : fireandice, private char: fireandice, private search: fireandice){}
 
     ngOnInit() {
-     this._api.getCharacters()
-              .subscribe(result => this.characters = result);
+        this. _api.getCharacters(this.pagenumber).subscribe(result => this.characters = result);
+    
     }
 
     btnclick(character: string) : void{
        this.char.getcharacter(character).subscribe(result => this.detail = result);
-
+     
+         
+    }
+ 
+    Adjustpages() : void{
+        this.pagenumber++;
+        this. _api.getCharacters(this.pagenumber).subscribe(result => this.characters = result);
+    }
+    Previous(): void{
+        this.pagenumber--;
+        this._api.getCharacters(this.pagenumber).subscribe(result => this.characters = result);
     }
 }

@@ -1,0 +1,83 @@
+
+  <div class="container">
+        <div class="row">
+         
+          <div class="col">
+                
+            
+            
+            
+            
+                <div class="card" *ngIf="books">
+                        <div class="card-header">
+                               
+                                                            
+                    
+                        </div>
+                    
+                        <div class="card-block">
+                            <table class="table table-hover">
+                                <thead>
+                                    <tr>
+                                        <th >Books</th>
+                                      
+                                        
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr *ngFor="let book of books">
+                                        <td (click)="btnclick(book.url)" *ngIf="book.name">{{book.name}}</td>
+                                      
+                                       
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                      </div>
+          </div>
+          
+          <div class="col" *ngIf="detail">
+                <div class="card card-body">
+                        <h4 class="card-title">{{detail.name}}</h4>
+                        <p class="card-text">{{detail.aliases}}</p>
+                        <div class="flex-row">
+                            <a class="card-link">{{detail.playedBy}}</a>
+                            <a class="card-link">{{detail.gender}}</a>
+                        </div>
+                    </div>
+          </div>
+          
+          <div class="col">
+                <div class="card">
+    
+                        <input #Boek type="text">
+                        <a class="btn btn-primary btn-lg" (click)="Findbook(Boek.value)" >
+                                Zoek boeknummer
+                            </a>
+                    </div>
+                    <br>
+                    <div class="card" *ngIf="book">
+                            <div class="card-header">{{book.name| uppercase}}
+                              
+                            </div>
+                          
+                            <div class="card-block">
+                              <ul class="list-group">
+                                <li class="list-group-item" *ngIf="book.numberOfPages">Pages:
+                                  <strong>{{book.numberOfPages}}</strong>
+                                </li>
+                                <li class="list-group-item" *ngIf="book.authors">Authors:
+                                  <strong>{{book.authors}}</strong>
+                                </li>
+                                <li class="list-group-item" *ngIf="book.father">Isbn:
+                                 <strong>{{book.isbn }}</strong>
+                                
+                                </ul>
+                            </div>
+                          </div>
+                      
+          
+          </div>    
+          
+        </div>
+      </div>
