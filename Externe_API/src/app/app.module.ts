@@ -10,11 +10,14 @@ import { RouterModule } from "@angular/router";
 import { HousesComponent } from './Houses/houses.component';
 import { BooksComponent } from './Books/books.component';
 import { HomeComponent } from './Home/home.component';
+import { PotterComponent } from './HarryPotter/potter.component';
+import { harrypotter } from './api/harrypotter';
 
 
 @NgModule({
   declarations: [
     AppComponent,
+    PotterComponent,
     NavBarComponent,
     GameThronesComponent,
     HousesComponent,
@@ -29,14 +32,16 @@ import { HomeComponent } from './Home/home.component';
       {path:'home', component: HomeComponent},
     {path: 'character', component: GameThronesComponent},
     {path: 'house', component: HousesComponent},
-    {path: 'book', component: BooksComponent}
+    {path: 'book', component: BooksComponent},
+    {path: 'hp',component: PotterComponent}
       
     ]),
     HttpClientModule
   ],
   schemas: [ NO_ERRORS_SCHEMA ],
   providers: [
-    fireandice
+    fireandice,
+    harrypotter
   ],
   bootstrap: [AppComponent]
 })

@@ -1,0 +1,11 @@
+C:\Users\user\Documents\AP\CloudAPI\EigenAPI\bin\Debug\netcoreapp2.0\EigenAPI.deps.json
+C:\Users\user\Documents\AP\CloudAPI\EigenAPI\bin\Debug\netcoreapp2.0\EigenAPI.runtimeconfig.json
+C:\Users\user\Documents\AP\CloudAPI\EigenAPI\bin\Debug\netcoreapp2.0\EigenAPI.runtimeconfig.dev.json
+C:\Users\user\Documents\AP\CloudAPI\EigenAPI\bin\Debug\netcoreapp2.0\EigenAPI.dll
+C:\Users\user\Documents\AP\CloudAPI\EigenAPI\bin\Debug\netcoreapp2.0\EigenAPI.pdb
+C:\Users\user\Documents\AP\CloudAPI\EigenAPI\obj\Debug\netcoreapp2.0\EigenAPI.csprojAssemblyReference.cache
+C:\Users\user\Documents\AP\CloudAPI\EigenAPI\obj\Debug\netcoreapp2.0\EigenAPI.csproj.CoreCompileInputs.cache
+C:\Users\user\Documents\AP\CloudAPI\EigenAPI\obj\Debug\netcoreapp2.0\EigenAPI.AssemblyInfoInputs.cache
+C:\Users\user\Documents\AP\CloudAPI\EigenAPI\obj\Debug\netcoreapp2.0\EigenAPI.AssemblyInfo.cs
+C:\Users\user\Documents\AP\CloudAPI\EigenAPI\obj\Debug\netcoreapp2.0\EigenAPI.dll
+C:\Users\user\Documents\AP\CloudAPI\EigenAPI\obj\Debug\netcoreapp2.0\EigenAPI.pdb

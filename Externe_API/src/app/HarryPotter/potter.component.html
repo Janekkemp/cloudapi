@@ -1,0 +1,80 @@
+
+  <div class="container">
+    <div class="row">
+     
+      <div class="col">
+            
+        
+        
+        
+        <a class="btn btn-primary btn-lg" (click)="Sort()" >
+            Sort by name
+            </a>
+            <div class="card" *ngIf="characters">
+                    <div class="card-header">
+                           
+                                                        
+                
+                    </div>
+                
+                    <div class="card-block">
+                        <table class="table table-hover">
+                            <thead>
+                                <tr>
+                                    <th >Characters</th>
+                                  
+                                    
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr *ngFor="let char of characters">
+                                    <td *ngIf="char.name">{{char.name}}</td>
+                                    <td>{{char.firstName}}</td> 
+                                    <td>{{char.house}}</td>
+                                  
+                                   
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                  </div>
+      </div>
+      <div class="col">
+        <input #spell type="text">
+        <a class="btn btn-primary btn-lg" (click)="Search(spell.value)" >
+                Search spell
+            </a>
+        <div class="card" *ngIf="spells">
+            <div class="card-header">
+                   
+                                                
+        
+            </div>
+        
+            <div class="card-block">
+                <table class="table table-hover">
+                    <thead>
+                        <tr>
+                            <th >Spells</th>
+                          
+                            
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr *ngFor="let spell of spells">
+                            <td>{{spell.name}}</td>
+                            <td>{{spell.effect}}</td>
+                          
+                           
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+          </div>
+
+      
+  
+      
+    
+    </div>
+  </div>
